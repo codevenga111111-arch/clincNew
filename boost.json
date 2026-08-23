@@ -1,0 +1,13 @@
+{
+    "agents": [
+        "opencode"
+    ],
+    "cloud": false,
+    "skills": [
+        "infer-conventions",
+        "laravel-best-practices",
+        "livewire-development",
+        "pest-testing",
+        "tailwindcss-development"
+    ]
+}
