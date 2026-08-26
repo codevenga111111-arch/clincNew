@@ -14,7 +14,7 @@
 
             <div class="mb-6">
                 <label class="block text-sm font-semibold text-gray-700 mb-2">Role Name</label>
-                <input type="text" name="name" value="{{ old('name', $role->name) }}" required autofocus class="w-full max-w-md px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-gray-50">
+                <input type="text" name="name" value="{{ old('name', $role->name) }}" required autofocus class="w-full max-w-md px-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-gray-50">
                 @error('name') <p class="text-red-500 text-xs mt-1">{{ $message }}</p> @enderror
             </div>
 
@@ -35,7 +35,7 @@
                             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
                                 @foreach ($groupPermissions as $permission)
                                     <label class="inline-flex items-center gap-2 cursor-pointer group">
-                                        <input type="checkbox" name="permissions[]" value="{{ $permission->name }}" class="w-4 h-4 rounded border-gray-300 text-purple-600 focus:ring-purple-500 transition-colors" {{ $role->hasPermissionTo($permission->name) ? 'checked' : '' }}>
+                                        <input type="checkbox" name="permissions[]" value="{{ $permission->name }}" class="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500 transition-colors" {{ $role->hasPermissionTo($permission->name) ? 'checked' : '' }}>
                                         <span class="text-sm text-gray-600 group-hover:text-gray-900 transition-colors">{{ $permission->name }}</span>
                                     </label>
                                 @endforeach
@@ -49,7 +49,7 @@
                 <a href="{{ route('admin.roles.index') }}" class="px-5 py-2.5 border border-gray-200 text-gray-700 rounded-xl hover:bg-gray-50 transition-colors font-medium text-sm">
                     Cancel
                 </a>
-                <button type="submit" class="px-5 py-2.5 bg-purple-600 hover:bg-purple-700 text-white rounded-xl transition-colors font-medium text-sm shadow-sm">
+                <button type="submit" class="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl transition-colors font-medium text-sm shadow-sm">
                     Update Role
                 </button>
             </div>

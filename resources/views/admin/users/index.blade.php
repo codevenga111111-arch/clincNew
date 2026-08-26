@@ -6,7 +6,7 @@
             <h2 class="text-2xl font-bold text-gray-800">{{ __('Users Management') }}</h2>
             <p class="text-sm text-gray-500 mt-1">Manage all users across the platform</p>
         </div>
-        <a href="{{ route('admin.users.create') }}" class="bg-purple-600 hover:bg-purple-700 text-white font-medium py-2.5 px-5 rounded-xl transition-colors flex items-center gap-2 shadow-sm">
+        <a href="{{ route('admin.users.create') }}" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 px-5 rounded-xl transition-colors flex items-center gap-2 shadow-sm">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg>
             Add User
         </a>
@@ -24,17 +24,17 @@
             <form method="GET" action="{{ route('admin.users.index') }}">
                 <div class="flex gap-4">
                     <div class="flex-1 relative">
-                        <input type="text" name="search" placeholder="Search users..." value="{{ request('search') }}" class="w-full pl-10 pr-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-gray-50">
+                        <input type="text" name="search" placeholder="Search users..." value="{{ request('search') }}" class="w-full pl-10 pr-4 py-2.5 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-gray-50">
                         <svg class="w-5 h-5 text-gray-400 absolute left-3 top-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
                     </div>
-                    <select name="user_type" class="border border-gray-200 rounded-xl text-sm px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent bg-gray-50">
+                    <select name="user_type" class="border border-gray-200 rounded-xl text-sm px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-gray-50">
                         <option value="">All Types</option>
                         <option value="admin" {{ request('user_type') == 'admin' ? 'selected' : '' }}>Admin</option>
                         <option value="doctor" {{ request('user_type') == 'doctor' ? 'selected' : '' }}>Doctor</option>
                         <option value="assistant" {{ request('user_type') == 'assistant' ? 'selected' : '' }}>Assistant</option>
                         <option value="patient" {{ request('user_type') == 'patient' ? 'selected' : '' }}>Patient</option>
                     </select>
-                    <button type="submit" class="bg-purple-600 hover:bg-purple-700 text-white font-medium py-2.5 px-6 rounded-xl transition-colors">Filter</button>
+                    <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 px-6 rounded-xl transition-colors">Filter</button>
                 </div>
             </form>
         </div>
@@ -57,7 +57,7 @@
                             <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{{ $user->id }}</td>
                             <td class="px-6 py-4 whitespace-nowrap">
                                 <div class="flex items-center gap-3">
-                                    <div class="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center text-white font-bold text-sm">
+                                    <div class="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center text-white font-bold text-sm">
                                         {{ substr($user->name, 0, 1) }}
                                     </div>
                                     <div>
@@ -94,7 +94,7 @@
                             </td>
                             <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
                                 <div class="flex items-center gap-3">
-                                    <a href="{{ route('admin.users.edit', $user) }}" class="text-purple-600 hover:text-purple-900 transition-colors">
+                                    <a href="{{ route('admin.users.edit', $user) }}" class="text-blue-600 hover:text-blue-900 transition-colors">
                                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
                                     </a>
                                     <a href="{{ route('admin.users.permissions', $user) }}" class="text-blue-600 hover:text-blue-900 transition-colors">

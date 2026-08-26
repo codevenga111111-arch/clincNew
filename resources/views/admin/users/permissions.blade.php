@@ -16,7 +16,7 @@
                 <h3 class="text-sm font-semibold text-gray-700 mb-2">User Roles</h3>
                 <div class="flex flex-wrap gap-2">
                     @forelse ($user->roles as $role)
-                        <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-purple-100 text-purple-700">
+                        <span class="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium bg-blue-100 text-blue-700">
                             <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
                             {{ $role->name }}
                         </span>
@@ -43,7 +43,7 @@
                             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
                                 @foreach ($groupPermissions as $permission)
                                     <label class="inline-flex items-center gap-2 cursor-pointer group">
-                                        <input type="checkbox" name="permissions[]" value="{{ $permission->name }}" class="w-4 h-4 rounded border-gray-300 text-purple-600 focus:ring-purple-500 transition-colors" {{ in_array($permission->name, $userPermissions) ? 'checked' : '' }}>
+                                        <input type="checkbox" name="permissions[]" value="{{ $permission->name }}" class="w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500 transition-colors" {{ in_array($permission->name, $userPermissions) ? 'checked' : '' }}>
                                         <span class="text-sm text-gray-600 group-hover:text-gray-900 transition-colors">{{ $permission->name }}</span>
                                     </label>
                                 @endforeach
@@ -57,7 +57,7 @@
                 <a href="{{ route('admin.users.index') }}" class="px-5 py-2.5 border border-gray-200 text-gray-700 rounded-xl hover:bg-gray-50 transition-colors font-medium text-sm">
                     Cancel
                 </a>
-                <button type="submit" class="px-5 py-2.5 bg-purple-600 hover:bg-purple-700 text-white rounded-xl transition-colors font-medium text-sm shadow-sm">
+                <button type="submit" class="px-5 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl transition-colors font-medium text-sm shadow-sm">
                     Update Permissions
                 </button>
             </div>

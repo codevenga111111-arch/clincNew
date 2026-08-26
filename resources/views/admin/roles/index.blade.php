@@ -6,7 +6,7 @@
             <h2 class="text-2xl font-bold text-gray-800">{{ __('Roles & Permissions') }}</h2>
             <p class="text-sm text-gray-500 mt-1">Manage roles and their permissions</p>
         </div>
-        <a href="{{ route('admin.roles.create') }}" class="bg-purple-600 hover:bg-purple-700 text-white font-medium py-2.5 px-5 rounded-xl transition-colors flex items-center gap-2 shadow-sm">
+        <a href="{{ route('admin.roles.create') }}" class="bg-blue-600 hover:bg-blue-700 text-white font-medium py-2.5 px-5 rounded-xl transition-colors flex items-center gap-2 shadow-sm">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/></svg>
             Add Role
         </a>
@@ -31,7 +31,7 @@
             <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 hover:shadow-md transition-shadow">
                 <div class="flex items-center justify-between mb-4">
                     <div class="flex items-center gap-3">
-                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500 to-purple-700 flex items-center justify-center text-white font-bold text-lg shadow-md">
+                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center text-white font-bold text-lg shadow-md">
                             {{ strtoupper(substr($role->name, 0, 2)) }}
                         </div>
                         <div>
@@ -45,7 +45,7 @@
                     <h4 class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Permissions</h4>
                     <div class="flex flex-wrap gap-1.5">
                         @foreach ($role->permissions->take(5) as $permission)
-                            <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-purple-100 text-purple-700">
+                            <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-700">
                                 {{ $permission->name }}
                             </span>
                         @endforeach
@@ -58,7 +58,7 @@
                 </div>
 
                 <div class="flex items-center gap-3 pt-4 border-t border-gray-100">
-                    <a href="{{ route('admin.roles.edit', $role) }}" class="flex-1 text-center bg-purple-50 hover:bg-purple-100 text-purple-700 font-medium py-2 rounded-xl transition-colors text-sm">
+                    <a href="{{ route('admin.roles.edit', $role) }}" class="flex-1 text-center bg-blue-50 hover:bg-blue-100 text-blue-700 font-medium py-2 rounded-xl transition-colors text-sm">
                         Edit
                     </a>
                     @if ($role->name !== 'super-admin')

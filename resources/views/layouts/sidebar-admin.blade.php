@@ -1,8 +1,8 @@
-<aside id="sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen bg-gradient-to-b from-[#8B5CF6] to-[#6D28D9] transition-transform -translate-x-full lg:translate-x-0 shadow-xl" aria-label="Sidebar">
+<aside id="sidebar" class="fixed top-0 left-0 z-40 w-64 h-screen bg-gradient-to-b from-[#60A5FA] to-[#2563EB] transition-transform -translate-x-full lg:translate-x-0 shadow-xl" aria-label="Sidebar">
     <div class="h-full px-3 py-4 overflow-y-auto">
         <a href="{{ route('admin.dashboard') }}" class="flex items-center pl-2.5 mb-8">
             <div class="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-md">
-                <svg class="w-6 h-6 text-purple-600" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 11h-4v4h-4v-4H6v-4h4V6h4v4h4v4z"/></svg>
+                <svg class="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-1.99.9-1.99 2L3 19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 11h-4v4h-4v-4H6v-4h4V6h4v4h4v4z"/></svg>
             </div>
             <span class="self-center text-xl font-bold whitespace-nowrap text-white ms-3">Clinic SaaS</span>
         </a>

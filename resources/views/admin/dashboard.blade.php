@@ -26,8 +26,8 @@
                             +0% from last month
                         </p>
                     </div>
-                    <div class="w-14 h-14 bg-purple-100 rounded-2xl flex items-center justify-center">
-                        <svg class="w-7 h-7 text-purple-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg>
+                    <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center">
+                        <svg class="w-7 h-7 text-blue-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/></svg>
                     </div>
                 </div>
             </div>
@@ -85,7 +85,7 @@
             <div class="lg:col-span-2 bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
                 <div class="flex items-center justify-between mb-6">
                     <h3 class="text-lg font-semibold text-gray-800">Recent Activity</h3>
-                    <a href="#" class="text-sm text-purple-600 hover:text-purple-700 font-medium">View All</a>
+                    <a href="#" class="text-sm text-blue-600 hover:text-blue-700 font-medium">View All</a>
                 </div>
                 <div class="text-center py-12">
                     <svg class="w-16 h-16 text-gray-300 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
@@ -98,13 +98,13 @@
                     <h3 class="text-lg font-semibold text-gray-800">Quick Actions</h3>
                 </div>
                 <div class="space-y-3">
-                    <a href="{{ route('admin.users.create') }}" class="flex items-center gap-3 p-3 rounded-xl bg-purple-50 hover:bg-purple-100 text-purple-700 transition-colors">
-                        <div class="w-10 h-10 bg-purple-200 rounded-xl flex items-center justify-center">
+                    <a href="{{ route('admin.users.create') }}" class="flex items-center gap-3 p-3 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-700 transition-colors">
+                        <div class="w-10 h-10 bg-blue-200 rounded-xl flex items-center justify-center">
                             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M15 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm-9-2V7H4v3H1v2h3v3h2v-3h3v-2H6zm9 4c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
                         </div>
                         <div>
                             <p class="font-medium">Add New User</p>
-                            <p class="text-xs text-purple-500">Create a new user account</p>
+                            <p class="text-xs text-blue-500">Create a new user account</p>
                         </div>
                     </a>
                     <a href="{{ route('admin.roles.index') }}" class="flex items-center gap-3 p-3 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-700 transition-colors">
