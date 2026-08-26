@@ -1,7 +1,12 @@
 <?php
 
+use App\Http\Controllers\Admin\BillingController;
+use App\Http\Controllers\Admin\ClinicController;
 use App\Http\Controllers\Admin\DashboardController as AdminDashboardController;
+use App\Http\Controllers\Admin\ReportController;
 use App\Http\Controllers\Admin\RoleController;
+use App\Http\Controllers\Admin\SettingController;
+use App\Http\Controllers\Admin\SubscriptionPlanController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Doctor\DashboardController as DoctorDashboardController;
 use App\Http\Controllers\Patient\RegistrationController;
@@ -33,6 +38,23 @@ Route::middleware(['auth', 'verified'])->prefix('admin')->name('admin.')->group(
     Route::get('users/{user}/permissions', [UserController::class, 'permissions'])->name('users.permissions');
     Route::post('users/{user}/permissions', [UserController::class, 'updatePermissions'])->name('users.update-permissions');
     Route::resource('roles', RoleController::class);
+    Route::resource('clinics', ClinicController::class);
+    Route::post('clinics/{clinic}/toggle-active', [ClinicController::class, 'toggleActive'])->name('clinics.toggle-active');
+    Route::post('clinics/{clinic}/impersonate', [ClinicController::class, 'impersonate'])->name('clinics.impersonate');
+    Route::resource('subscription-plans', SubscriptionPlanController::class);
+    Route::post('subscription-plans/{subscriptionPlan}/toggle-active', [SubscriptionPlanController::class, 'toggleActive'])->name('subscription-plans.toggle-active');
+    Route::get('billing', [BillingController::class, 'index'])->name('billing.index');
+    Route::get('billing/{subscription}', [BillingController::class, 'show'])->name('billing.show');
+    Route::get('reports', [ReportController::class, 'index'])->name('reports.index');
+    Route::get('reports/clinics-status', [ReportController::class, 'clinicsByStatus'])->name('reports.clinics-status');
+    Route::get('reports/revenue', [ReportController::class, 'revenue'])->name('reports.revenue');
+    Route::get('reports/subscriptions', [ReportController::class, 'subscriptions'])->name('reports.subscriptions');
+    Route::get('reports/user-growth', [ReportController::class, 'userGrowth'])->name('reports.user-growth');
+    Route::get('reports/export/clinics', [ReportController::class, 'exportClinics'])->name('reports.export.clinics');
+    Route::get('reports/export/subscriptions', [ReportController::class, 'exportSubscriptions'])->name('reports.export.subscriptions');
+    Route::get('settings', [SettingController::class, 'index'])->name('settings.index');
+    Route::put('settings', [SettingController::class, 'update'])->name('settings.update');
+    Route::get('audit-log', [SettingController::class, 'auditLog'])->name('settings.audit-log');
 });
 
 Route::middleware(['auth', 'verified'])->prefix('doctor')->name('doctor.')->group(function () {
